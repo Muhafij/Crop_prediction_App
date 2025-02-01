@@ -1,0 +1,204 @@
+/* Base container styles */
+.container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2.5rem;
+    background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  /* Header styles */
+  h2 {
+    color: #2d3436;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid #00b894;
+    padding-bottom: 1rem;
+  }
+  
+  /* Form group styles */
+  .form-group {
+    margin-bottom: 1.8rem;
+    position: relative;
+  }
+  
+  /* Label styles */
+  label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: #2d3436;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  /* Input field styles */
+  input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 2px solid #dfe6e9;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background-color: #ffffff;
+  }
+  
+  input:focus {
+    outline: none;
+    border-color: #00b894;
+    box-shadow: 0 0 0 3px rgba(0, 184, 148, 0.1);
+  }
+  
+  input:hover {
+    border-color: #00b894;
+  }
+  
+  /* Remove number input spinners */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
+  
+  /* Button styles */
+  button {
+    width: 100%;
+    padding: 1rem;
+    margin-top: 1rem;
+    background-color: #00b894;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  button:hover {
+    background-color: #00a884;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(0, 184, 148, 0.2);
+  }
+  
+  button:active {
+    transform: translateY(0);
+  }
+  
+  button:disabled {
+    background-color: #b2bec3;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Error message styles */
+  .error {
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background-color: #fff5f5;
+    color: #e53e3e;
+    border-radius: 8px;
+    text-align: center;
+    border-left: 4px solid #e53e3e;
+    font-size: 0.95rem;
+  }
+  
+  /* Result styles */
+  .result {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: #f0fff4;
+    border-radius: 8px solid #00b894;
+    text-align: center;
+    border-left: 4px solid #00b894;
+    animation: fadeIn 0.5s ease-in;
+  }
+  
+  .result h3 {
+    color: #00b894;
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+  }
+  
+  /* Loading animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .container {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+    
+    h2 {
+      font-size: 1.8rem;
+    }
+    
+    input {
+      padding: 0.8rem;
+    }
+    
+    button {
+      padding: 0.9rem;
+      font-size: 1rem;
+    }
+  }
+  
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #00b894;
+    border-radius: 4px;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #00a884;
+  }
+  
+  /* Field validation styles */
+  input:invalid {
+    border-color: #e53e3e;
+  }
+  
+  input:invalid:focus {
+    border-color: #e53e3e;
+    box-shadow: 0 0 0 3px rgba(229, 62, 62, 0.1);
+  }
+  
+  /* Optional: Add tooltip for invalid fields */
+  input:invalid + .tooltip {
+    position: absolute;
+    bottom: -20px;
+    left: 0;
+    color: #e53e3e;
+    font-size: 0.8rem;
+  }
